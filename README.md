@@ -2,6 +2,8 @@
 
 A set of pseudo-standards for metadata for ecoacoustics projects.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5778058.svg)](https://doi.org/10.5281/zenodo.5778058)
+
 ## Why
 
 Common standards of data allow work to be reused across different projects.
