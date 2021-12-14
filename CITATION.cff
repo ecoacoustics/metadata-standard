@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you used these documents, please cite it as below."
+authors:
+  - family-names: Truskinger
+    given-names: Anthony
+    orcid: https://orcid.org/0000-0003-1110-1483
+  - family-names: D. A. Scarpelli
+    given-names: Marina
+    orcid: https://orcid.org/0000-0001-7315-1406
+title: "Ecoacoustics Metadata Standards"
+version: 0.1
+doi: 
