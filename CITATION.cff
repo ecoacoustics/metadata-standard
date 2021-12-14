@@ -1,3 +1,4 @@
+$schema: https://raw.githubusercontent.com/citation-file-format/citation-file-format/main/schema.json
 cff-version: 1.2.0
 message: "If you used these documents, please cite it as below."
 authors:
@@ -8,5 +9,7 @@ authors:
     given-names: Marina
     orcid: https://orcid.org/0000-0001-7315-1406
 title: "Ecoacoustics Metadata Standards"
+type: standard
+url: https://github.com/ecoacoustics/metadata-standard
 version: 0.1
 doi: 
