@@ -49,8 +49,8 @@ We generally encourage users to **copy** in any relevant data. In particular,
 leaving notes that describe the data (e.g. "left mic failed", or "RTC failed,
 dates invalid"), or copies of their records. Any metadata is appreciated.
 
-Most data should be put in the site folders as usually, most important
-information is related to a sensor.
+Most data should be put in the site folders as usually most important
+information is related to a sensor. More information about additional metadata can be found [here](./field_data.md#additional-metadata).
 
 ### Wrong date or time set
 
@@ -72,7 +72,7 @@ recording started in January of the year 2000... which is almost certainly wrong
 
 Provided the sensor was deployed using only a battery pack, then this error is
 repairable IFF the _exact original recording start date and time_ is known. For
-that reason, [this](./field_data.md#The+date+and+time+to+use) is important.
+that reason, [this again](./field_data.md#The+date+and+time+to+use) is important.
 
 ### For solar panel deployments
 
