@@ -49,7 +49,7 @@ _Frontier Labs_ and _Wildlife Acoustics_ (and others?) store metadata in
 the audio file itself.
 
 As far as we are aware, no sensor stores metadata in a sidecar files. However,
-some software (like Raven, and AvianNZ) and do store
+some software (like Raven, and AvianNZ) do store
 [annotations](./annotations.md) in sidecar files.
 
 Some sensors, like the _Frontier Labs BARs_ used shared _sidecar_ files.
@@ -67,7 +67,7 @@ of the recordings.
 
 ### Recommendations
 
-The principle hear is to make it always easy to move audio files and allow
+The principle here is to make it always easy to move audio files and allow
 the metadata to be moved along with them, with the least chance of error or
 erasure.
 
@@ -95,10 +95,10 @@ A vendor **SHOULD NOT** implement on only one metadata format.
 
 1. Filenames **MUST** consist of only safe characters.
     - Unsafe characters include the following and **MUST NOT** be used:
-    - Characters that can be used as wildcards in a shell command (
+      - Characters that can be used as wildcards in a shell command (
     such as `*`, `?`, `[`, `]`, `{`, `}`).
-    - Characters that are used in path constructs (such as `/`, `\`, `:`, and `;`)
-    - Non-printable characters (`\x00` to `\x1F`)
+      - Characters that are used in path constructs (such as `/`, `\`, `:`, and `;`)
+      - Non-printable characters (`\x00` to `\x1F`)
 2. Filenames **SHOULD** prefer basic ASCII characters
     - UTF-8 characters **MAY** be used but there a strong preference for simpler characters
 3. Filenames **MUST** avoid encoded information
