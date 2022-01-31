@@ -1,6 +1,6 @@
 # Analysis Effort
 
-This section describes which metrics should be reported when performing
+This section describes which metrics and procedures should be reported when performing
 data analysis. It also aims to propose a standardised way to do that so it is
 easier to compare and share data among different projects.
 
@@ -21,7 +21,7 @@ Description of how the data was analysed
 
 Example:
 
-- Data was `annotated`
+- Data was manually `annotated`
 - `Acoustic indices` were calculated
 - Species `presence/absence` data was collected
 - Minutes were `clustered`, etc.
@@ -52,6 +52,12 @@ understand this might not always be possible or accurate. Therefore, even if it
 is a rough estimate, or only the computational effort, this will help to provide
 comparison between methods and inform the development of better tools.
 
+Example:
+- `X` bytes of data were manually annotated in `Y` hour of effort.
+- `U` bytes of data were analysed using `AnalysisPrograms.exe` to calculate acoustic indices. In a computer with `ABC` specifications, the analysis took `D` hours to run.
+- `F` hours were necessary to go through `E` bytes of files and collecting bird species presence/absence information.
+- Clustering of `Q` bytes took `P` minutes with `N` clusters being generated. Identification of those clusters took `O` hours. 
+
 ## What was the analysis protocol?
 
 Was there protocol used to analyse the data in a systematic way? In this section
@@ -78,15 +84,15 @@ link/DOI for access.
 ____
 
 Any additional information that was no covered in this document
-is valuable as it could improve usability of the data in different contexts. Information on techniques that were tested and did not work is also extremely valuable along with the information/hypothesis of how/why it failed. A lot of time could be saved if we shared not only the success stories but also the "failures".
+is valuable as it could improve usability of the data in different contexts. Information on techniques that were tested and did not work is also extremely valuable along with the information/hypothesis of how/why it failed. A lot of time could be saved if we shared not only the success stories but also the "fiascos".
 
 If you would like to contribute, check [this link](./README.md#status)
 
 ## Checklist
 
 - [ ] Analysis effort
-- [ ] Description data analysis
-- [ ] Information on which software was used
+- [ ] Data analysis description
+- [ ] Information software/method used
 - [ ] How much effort was put into analysis
 - [ ] Analysis protocol
   - [ ] Description
