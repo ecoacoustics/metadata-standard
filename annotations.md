@@ -22,17 +22,19 @@ If you're not sure what does this means, check our page on [units](./units.md)
 [seconds](./units.md#offsets), i.e.: offset from the initial time of the
 recording
 
-- [**MUST**] **Species Scientific Name/Common name/Sound id:** Scientific name
-is preferred to decrease ambiguity
+- [**MUST**] **Identification** Can be Species Scientific Name/Common name/Sound id (*Scientific name*
+is preferred to decrease ambiguity)
 
-- [**MUST**] **Type of tag:** Indication if the tag is scientific name, common
-name or other type of tags; E.g.: if the tag corresponds to species scientific
+- [**MUST**] **Type of tag:** Indication if the identification is scientific name, common
+name or other type of annotation; 
+  - E.g.: if the tag corresponds to species scientific
 name, type of tag should be `scientific_name`;
+  - E.g.: if the tag corresponds to a description of the sound (i.e.: car passing by; kids playing; etc), type of tag should be `sound_id`
 
 - [**MUST**] **Event date:** [date](./units.md#dates) of the annotation
 (same date as recording)
 
-- [**MUST**] **Unique ID:** Unique id of that annotation
+- [**MUST**] **Unique ID:** Unique id of that annotation (i.e.: a number that is linked to that annotation only)
 
 - [**MUST**] **Verification status:** if the annotation was verified by someone
 else, this should be stated. The suggested vocabulary here is the
