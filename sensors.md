@@ -187,19 +187,48 @@ however, we're seeking comments from vendors before designing such a format.
 
 This is a list of the fields that could be defined in the metadata of an audio file:
 
-- `recording_start`
-- `recording_end`
-- `sensor_id`
-- `sensor_firmware_version`
-- `microphone_type_<index>`
-- `microphone_id_<index>`
-- `microphone_build_date_<index>`
-- `channel_gain_<index>`
-- `memory_card_id`
-- `battery_voltage`
-- `battery_percentage`
+- `dateTime` in ISO8601 format
+- `sensorUTCOffset` - not required if included in dateTime
+- `fileName` - ideally, containing dateTime and UTC information
+- `recordingStart`
+- `recordingEnd`
+- `sensorID` - identification of the sensor for deployment purposes
+- `deviceSerial` - number identifying the sensor to the vendor
+- `sensorFirmwareVersion`
+- `microphoneType_<index>`
+- `microphoneID_<index>`
+- `microphoneBildDate_<index>`
+- `channelGain_<index>`
+- `sampleRate`
+- `fileSize`
+- `duration`
+- `fileFormat`
+- `bitsPerSample`
+- `channelCount` - 1 or 2 channels, i.e.: mono or stereo
+- `bitSize`
+- `mediaType`
+- `memoryCardSerial`
+- `memoryCardID`
+- `cardSlotNumber`
+- `memoryCardCapacity`
+- `memoryCardFreeSpace`
+- `memoryCardSpeed`
+- `memoryCardFormatType`
+- `memoryCardManufacturerID`
+- `memoryCardOemID`
+- `memoryCardProductRevision`
+- `memoryCardWriteCurrentVmin`
+- `memoryCardWriteCurrentVmax`
+- `memoryCardWriteB1Size`
+- `memoryCardEraseB1Size`
+- `batteryVoltage`
+- `batteryPercentage`
+- `powerType` - solar or internal battery
 - `location`
-- `last_time_sync`
-- `sensor_utc_offset`
+- `latitude`
+- `longitude`
+- `lastTimeSync`
+- `scheduleName`
+
 
 // more to come
