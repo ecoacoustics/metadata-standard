@@ -49,6 +49,7 @@ or file next to this README.
 - [Storage](./storage.md)
 - [Annotations](./annotations.md)
 - [Analysis Effort](./analysis_effort.md)
+- [Command Line Interface](./cli.md) for batch analysis
 
 ## Terminology
 
