@@ -21,10 +21,10 @@ Systems that do these analyses, like your University _High Performance Computer_
 
 - their job systems are not[^1] interactive
 - their job systems are not graphical 
-   - you can't _show_ images (but you can _save_ thhem for later)
+   - you can't _show_ images (but you can _save_ them for later)
    - you can't run your analyses step by step
 - they tend to be highly parallelizable 
-- they tend to be file based - they have a shared netowrk storage system that all jobs can access
+- they tend to be file based - they have a shared network storage system that all jobs can access
 
 So what are we to do?
 
@@ -35,16 +35,16 @@ A little bit of software architecture will help! Any analyses should have three 
 - The core part of your analysis that is common to both.
 
 In another article !!!TODO!!! we'll help you structure your programs to adhere to this guidance.
-This article focuses on a standard implentation for the CLI interface.
+This article focuses on a standard implementation for the CLI interface.
     
 ## Common Analysis CLI
 
 ### Purpose
 
-To analyse a short block of audio with pre-definined (and configureable analysis)
-with the restriction that the analysis must be non-interactive, and non-grpahical.
+To analyze a short block of audio with pre-defined (and configurable analysis)
+with the restriction that the analysis must be non-interactive, and non-graphical.
 
-Typical usages would be to run an event recogniser or a classifier over a segment of audio.
+Typical usages would be to run an event recognizer or a classifier over a segment of audio.
 
 ### Syntax
 
@@ -75,7 +75,7 @@ A Linux example running a Bash script:
     - it should be executable (i.e. have the `+x` permission on Linux/Mac, or have the `.exe` or `.ps1` extension on Windows) 
 - `--output` is a required option that specifies the directory where output from your analysis **MUST** be places
     - the supplied path **MUST** be absolute
-- `--configuration` is an _optional_ option that **MAY** be provided to customise the analysis
+- `--configuration` is an _optional_ option that **MAY** be provided to customize the analysis
     - the supplied path **MUST** be absolute
 - `<path to input file>`
     - the supplied path **MUST** be absolute
@@ -104,7 +104,7 @@ Real world practicalities mean CLIs are not as simple as this spec defines. Thus
 
 #### A cross-platform PowerShell example
 
-The following PowerShell example adapts [AP.exe](https://github.com/QutEcoacoustics/audio-analysis) to conform to this specificfation
+The following PowerShell example adapts [AP.exe](https://github.com/QutEcoacoustics/audio-analysis) to conform to this specification
 
 ```pwsh
 #!/usr/bin/env pwsh -l
@@ -129,7 +129,7 @@ return $LASTEXITCODE
 
 ### Configurable segment semantics?
 
-Should the block size, format, or overlap be configureable?
+Should the block size, format, or overlap be configurable?
 
 Does a user want 120-second blocks, consistent sample rate, or an overlap of 50%?
 
@@ -146,11 +146,11 @@ It would be nice if we could pass a metadata blob to the analysis. Something lik
 
 ### Other standards for other tasks
 
-This standard is designed specificially for analyses where no learning/training occurs. 
+This standard is designed specifically for analyses where no learning/training occurs. 
 
-Does the opportunity exist to define a stanard for training tasks?
+Does the opportunity exist to define a standard for training tasks?
 
-Analysis tends to be embarassingly parallel; a need to run on HPC (or in batch systems) drives this standard. Does that need also exist for training?
+Analysis tends to be embarrassingly parallel; a need to run on HPC (or in batch systems) drives this standard. Does that need also exist for training?
 
 ---
 
