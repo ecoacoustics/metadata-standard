@@ -1,3 +1,7 @@
+---
+title: Data collection and metadata
+---
+
 # Data collection and metadata
 
 This part is aimed to inform best practice for providing information

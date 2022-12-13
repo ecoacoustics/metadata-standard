@@ -1,3 +1,7 @@
+---
+title: Analysis Effort
+---
+
 # Analysis Effort
 
 This section describes which metrics and procedures should be reported when performing

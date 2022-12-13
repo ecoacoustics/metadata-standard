@@ -1,3 +1,7 @@
+---
+title:  Naming and Terminology
+---
+
 # Naming and Terminology
 
 ## Terms

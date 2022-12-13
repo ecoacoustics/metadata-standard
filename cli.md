@@ -1,4 +1,5 @@
 ---
+title: Command Line Interfaces
 status: draft
 version: 0.1
 ---

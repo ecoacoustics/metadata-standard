@@ -1,3 +1,7 @@
+---
+title: Metadata collected by sensors
+---
+
 # Metadata collected by sensors
 
 Most acoustic sensors (or _passive acoustic monitors_) collect some metadata

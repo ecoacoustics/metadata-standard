@@ -1,3 +1,7 @@
+---
+title: Standard structure for storing audio files
+---
+
 # Standard structure for storing audio files
 
 It is advisable to keep original files as those have the log file associate

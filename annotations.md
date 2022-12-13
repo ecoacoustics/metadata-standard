@@ -1,3 +1,7 @@
+---
+title: Annotations guides
+---
+
 # Annotations guides
 
 An _annotation_ is any descriptive mark applied to some data.
