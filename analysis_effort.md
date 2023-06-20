@@ -90,8 +90,6 @@ ____
 Any additional information that was no covered in this document
 is valuable as it could improve usability of the data in different contexts. Information on techniques that were tested and did not work is also extremely valuable along with the information/hypothesis of how/why it failed. A lot of time could be saved if we shared not only the success stories but also the "fiascos".
 
-If you would like to contribute, check [this link](./README.md#status)
-
 ## Checklist
 
 - [ ] Analysis effort
