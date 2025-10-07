@@ -4,6 +4,20 @@ title: Filenames for audio files
 
 # Filenames for audio files
 
+This document is aims to standardise audio file names so for easy ingestion by
+platforms and tools such as [Ecosounds](https://www.ecosounds.org/) and
+[emu](https://github.com/QutEcoacoustics/emu).
+
+Having a consistent file format for audio files encourages the collaboration,
+interoperability, and re-use of audio data.
+
+## Common Rules
+
+These rules should be applied to all audio files
+
+1. All audio files **should** have a file extension notating the file format
+2. All audio files **should** contain information about when it was recorded in the file name
+
 ## Recommended
 
 To maintain consistency across contributors and easy ingestion of data, it is
@@ -109,7 +123,7 @@ E.g. A UTC offset of "UTC+10:00" will be encoded in the file name as such:
 | ------------- | ------------------------------- | ------------------- |
 | `-hhmm`       | `2017-06-25T10:21:05-1000.flac` |                     |
 | `_hhmm`       | `2017-06-25T10:21:05_1000.flac` |                     |
-| `*hhmm`       | `2017-06-25T10:21:05_1000.flac` |                     |
+| `*hhmm`       | `2017-06-25T10:21:05*1000.flac` |                     |
 | `Z`           | `2017-06-25T10:21:05Z.flac`     | Shortcode for UTC+0 |
 
 ### Invalid Date & Time Formats
@@ -130,7 +144,7 @@ the audio files name, you can use the following formats.
 
 [ISO6709:H without trailing solidus](<https://en.wikipedia.org/wiki/ISO_6709#String_expression_(Annex_H)>)
 
-E.g.
+E.g. An audio file with the latitude -39.5336, and longitude of -131.2711
 
 ```txt
 2017-06-25T10:21:05-39.5336-131.2711.flac`
@@ -153,11 +167,8 @@ E.g. For a UTC offset of `+1000`
 | M    | Minutes |
 | S    | Seconds |
 
-| Format | Example                                               | Commonly Used By |
-| ------ | ----------------------------------------------------- | ---------------- |
-|        | `20180226*040000 _27.2819 90.1361*.wav`               |                  |
-|        | `20180226_040000 [27.2819 90.1361].wav`               |                  |
-|        | `20160823*063006* *-1.4763 178.8986*.wav`             |                  |
-|        | `20180210*123000 \_23.8916 95.9669*.wav`              |                  |
-|        | `20180226*040000Z+40.1213-075.0015+2.79CRSWGS*84.wav` |                  |
-|        | `20210617T080000*-18.2656+144.5564.wav`               |                  |
+| Format        | Example                           |
+| ------------- | --------------------------------- |
+| `[DD.D DD.D]` | `20180226 [27.2819 90.1361].wav`  |
+| `*DD.D DD.D*` | `20160823 *-1.4763 178.8986*.wav` |
+| `_DD.D DD.D*` | `20180226 _27.2819 90.1361*.wav`  |
