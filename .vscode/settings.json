@@ -9,7 +9,8 @@
         "Audobon",
         "ecoacoustics",
         "FLAC",
-        "interoperation"
+        "interoperation",
+        "ecosounds"
     ],
     "editor.rulers": [
         80,
