@@ -11,16 +11,23 @@ This is important for researchers, platforms, and tools alike.
 
 ## Recommended Format
 
-Our recommended format is:
+Our recommended format[^1] is:
 
 ```txt
-{Date}[_{SiteName}][_{...other}].{Extension}
+{Date}[_{SiteName}][…_{Other Components}].{Extension}
 ```
+
+Where:
+
+- `Date` is the date and time the recording started. See the [Dates](#dates) section for details.
+- `SiteName` is an optional human readable name for the recording location.
+- `Other Components` are optional additional information, such as location. See the [Components](#components) section for details.
+- `Extension` is a normal file extension. See the [Extensions](#extensions) section for details.
 
 Valid examples of this format include:
 
 ```txt
-20210901T120000Z_SiteName_123456.flac
+20170625T102105Z_SiteName_123456.flac
 20170625T102105+1000_Oxley-creek_-12.345+127.789.wav
 20170625T102105.123456+0930.wav
 ```
@@ -29,7 +36,8 @@ We'll explain each part of the format below.
 
 > [!Note]
 > Most tools and platforms don't output filenames in this format yet.
-> However, Ecosounds and EMU are two tools that do.
+> However, [Ecosounds](https://ecosounds.org/) and
+> [EMU](https://github.com/QutEcoacoustics/emu) are two tools that do.
 
 The choices made in this document are designed, in priority order, to:
 
@@ -81,15 +89,21 @@ For example:
 
 ## Extensions
 
-A filename **MUST** end with a valid audio file extension, such as:
+A filename **MUST** end with a file extension, and **SHOULD** be and extension
+used for audio. For example:
 
 - `.flac`
 - `.wav`
 - `.mp3`
 
+An extension **MUST** match the actual file format of the audio file.
+
 ## Components
 
+Each piece of information in a filename is called a component.
 You **MUST** separate components of the filename with an underscore (`_`).
+The sole exception to this is the extension component which is separated
+with a period (`.`).
 
 For example:
 
@@ -97,6 +111,10 @@ For example:
 - 20170625T102105Oxley creek.wav
 + 20170625T102105_Oxley-creek.wav
 ```
+
+You **MAY** include as many additional components as you like, in any order,
+separated by underscores (`_`), however the minimum requirement is to include
+the datestamp and extension components.
 
 ## Dates
 
@@ -117,7 +135,7 @@ time the recording started. Filenames **MAY** use `Z` to indicate UTC+0.
 Examples of the recommended format follow:
 
 ```txt
-20170625T102105Z.flac
+20250990T033235Z.flac
 20250990T033235.123456+0930.wav
 20250990T033235-0430.wav
 ```
@@ -127,7 +145,7 @@ but this is **NOT RECOMMENDED** because the datestamp becomes ambiguous.
 
 ### Precise format
 
-The precise format for the date and time is: `YYYYMMDDThhmmss[.SSSSSS][Z|(+|-)hhmm]`.
+The precise format[^1] for the date and time is: `YYYYMMDDThhmmss[.SSSSSS][(Z|(+|-)hhmm)]`.
 Where:
 
 | Code       | Meaning                                                             |
@@ -140,28 +158,28 @@ Where:
 | mm         | Minutes, with leading zeros                                         |
 | ss         | Seconds, with leading zeros                                         |
 | SSSSSS     | [Optional] Fractional seconds (up to 6 digits)                      |
-| Z          | [Optional] UTC+0 designator                                         |
+| Z          | [Optional] UTC+0 designator, instead of                             |
 | (+\|-)hhmm | [Optional] UTC offset in hours and minutes, positive if east of UTC |
 
 ## Locations
 
-It is **recommended** to encode location information inside the metadata of
+It is **RECOMMENDED** to encode location information inside the metadata of
 audio files rather than in filenames.
 
 However, if you do need to encode location, then filenames **MUST** use
-[ISO6709:H](<https://en.wikipedia.org/wiki/ISO_6709#String_expression_(Annex_H)>)
+[ISO6709:H](https://en.wikipedia.org/wiki/ISO_6709#String_expression_(Annex_H))
 without a trailing solidus to represent locations in filenames.
 We omit the trailing solidus (`/`) to avoid special characters in filenames.
 
-The precise format is: `(+|-)<Latitude>(+|-)<Longitude>[[+|-]<Altitude>][<CRS>]`
-, where:
+The precise format[^1] is: `(+|-)<Latitude>(+|-)<Longitude>[(+|-)<Altitude>][<CRS>]`,
+where:
 
 | Code      | Meaning                                                   |
 | --------- | --------------------------------------------------------- |
 | Latitude  | Latitude in decimal degrees, DD.DDDDDD                    |
 | Longitude | Longitude in decimal degrees, DDD.DDDDDD                  |
-| Altitude  | Altitude in meters above sea level (optional)             |
-| CRS       | Coordinate Reference System (optional, default is WGS84). |
+| Altitude  | [Optional] Altitude in meters above sea level             |
+| CRS       | [Optional] Coordinate Reference System (default is WGS84) |
 
 - Implementers **MUST** use only decimal degrees.
   - **DO NOT** use degrees, minutes, seconds.
@@ -203,7 +221,7 @@ time formats from filenames. The full list of supported formats can be found
 in EMU's test fixtures: <https://github.com/QutEcoacoustics/emu/blob/master/test/Fixtures/FileNameParsingFixtures.csv>
 
 Alternative formats **SHOULD NOT** be used, but we recognise that many formats
-are already in use. EMU supports the following alternative formats and can convert[^1]
+are already in use. EMU supports the following alternative formats and can convert[^2]
 them to the recommended format.
 
 | Format                       | Example                          | Commonly Produced By | Comments                                                 |
@@ -228,7 +246,7 @@ So far only one manufacturer (Frontier Labs) encodes both a start and end date
 in their filenames. They do this so their localisation software can determine
 what direction from a recorder a sound was made.
 
-We **DO NOT RECOMMEND** this format, but we recognise it is in use.
+You **SHOULD NOT** use this format, but we recognise it is in use.
 Instead we **RECOMMEND** embedding the end date in the audio file's metadata.
 
 If you need to parse it, then EMU can parse both the start and end datestamps.
@@ -245,5 +263,13 @@ the recommended format.
 
 ---
 
-[^1]: EMU can not parse all components of every format. It does however do a
+[^1]: Our syntax for formats is as follows:
+
+- `{}` indicates the name of a value that should be substituted
+- `[]` indicates an optional component
+- `…` indicates that the following component can be repeated zero or more times
+- `(|)` indicates a choice - choose just one of the options inside the parentheses
+- Literal characters (e.g. `-`, `_`, `.`) indicate that character must be present
+
+[^2]: EMU can not parse all components of every format. It does however do a
       good job of presenting datestamps in the recommended format.
