@@ -261,15 +261,13 @@ The format prefixes the start date with `S` and the end date with `E`.
 The datestamps produced in this format are otherwise well formatted with respect to
 the recommended format.
 
----
 
-[^1]: Our syntax for formats is as follows:
-
-- `{}` indicates the name of a value that should be substituted
-- `[]` indicates an optional component
-- `…` indicates that the following component can be repeated zero or more times
-- `(|)` indicates a choice - choose just one of the options inside the parentheses
-- Literal characters (e.g. `-`, `_`, `.`) indicate that character must be present
+[^1]: Our syntax for formats follows:
+    - `{}` indicates the name of a value that should be substituted
+    - `[]` indicates an optional component
+    - `…` indicates that the following component can be repeated zero or more times
+    - `(|)` indicates a choice - choose just one of the options inside the parentheses
+    - Literal characters (e.g. `-`, `_`, `.`) indicate that character must be present
 
 [^2]: EMU can not parse all components of every format. It does however do a
       good job of presenting datestamps in the recommended format.
