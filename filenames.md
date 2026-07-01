@@ -11,15 +11,19 @@ This is important for researchers, platforms, and tools alike.
 
 ## Recommended Format
 
+We have a recommended format that you should use if you need to make new audio files.
+However, there are many existing formats that our software recognises.
+See the [Alternative formats](#alternative-date--time-formats) section.
+
 Our recommended format[^1] is:
 
 ```txt
-{Date}[_{SiteName}][…_{Other Components}].{Extension}
+{Datestamp}[_{SiteName}][…_{Other Components}].{Extension}
 ```
 
 Where:
 
-- `Date` is the date and time the recording started. See the [Dates](#dates) section for details.
+- `Datestamp` is the date **and** time the recording started. See the [Datestamps](#datestamps) section for details.
 - `SiteName` is an optional human readable name for the recording location.
 - `Other Components` are optional additional information, such as location. See the [Components](#components) section for details.
 - `Extension` is a normal file extension. See the [Extensions](#extensions) section for details.
@@ -116,7 +120,7 @@ You **MAY** include as many additional components as you like, in any order,
 separated by underscores (`_`), however the minimum requirement is to include
 the datestamp and extension components.
 
-## Dates
+## Datestamps
 
 The most important part of a filename is the date and time the recording started.
 We recommend using an [ISO8601](https://en.wikipedia.org/wiki/ISO_8601)
